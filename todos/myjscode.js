@@ -47,25 +47,22 @@ function insertAfter(elem, refElem) {
     return refElem.parentNode.insertBefore(elem, refElem.nextSibling);
 }
  */
-(function main() {
-    document.querySelector('input').addEventListener('keydown', function (e) {
+class Todo {
+     addNewTask = (e) => {
         if (e.keyCode === 13) {
-            li.setAttribute("class", "todoListItem");
-            console.log(this.value);
             let parent = document.getElementById('parent');
             let li = document.createElement('li');
-            li.innerHTML = event;
-            parent.appendChild(event);
-        }
-    });
-}());
-
-function Run() {
-
-    const todoList = document.getElementById('newNote')
-    todoList.addEventListener("keypress", this.addNewField);
-
+            li.setAttribute("class", "todoListItem");
+            li.innerHTML = event.target.value;
+            parent.appendChild(li);
+        } 
+     }
 }
+
+(function main() { 
+    const todo = new Todo();
+    document.querySelector('input').addEventListener('keydown', todo.addNewTask);
+}());
 /*
 (function addNewField (event) {
 
