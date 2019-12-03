@@ -205,3 +205,13 @@ input {
     margin-top: 50px; 
     margin-left: 35%;
 }
+li {
+    list-style-type: none;
+    border: 1px solid gray;
+    font-size: 35px;
+    font-family: sans-serif;
+    position: relative;
+    cursor: pointer;
+    margin-left: 34%;
+    margin-right: 34%;
+}
